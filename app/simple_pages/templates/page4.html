@@ -1,4 +1,123 @@
-{% extends "base.html" %}
-{% block content %}
-    Page 4
-{% endblock %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">Sai Babu Bonthu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                   href="{{ url_for('simple_pages.show', page="index") }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1") }}">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page3") }}">Python/Flask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active"
+                                   href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <header>
+
+                    <h1>My Understanding on CI/CD</h1><small>
+                    Last updated on
+                    <time datetime="March 6,2022">March 6,2022</time>
+                    by Sai Babu Bonthu </small>
+                    <img src="{{ url_for('static', filename='images/heroku.jpg') }}" class="d-block w-100" alt="...">
+                    <h4> Continuous Integration and Deployment</h4>
+                    <p>Continuous Integration is the practice of testing each change done to your codebase automatically
+                        and
+                        as early as possible. Continuous Deployment follows the testing that happens during Continuous
+                        Integration and pushes changes to a staging or production system..</p>
+                    <h4>Continuous Integration</h4>
+                    <p>Developers practicing continuous integration merge their changes back to the main branch as often
+                        as
+                        possible. The developer's changes are validated by creating a build and running automated tests
+                        against the build. By doing so, you avoid integration challenges that can happen when waiting
+                        for
+                        release day to merge changes into the release branch.
+
+                        Continuous integration puts a great emphasis on testing automation to check that the application
+                        is
+                        not broken whenever new commits are integrated into the main branch.</p>
+                    <h4>Continuous deployment</h4>
+                    <p>Continuous deployment goes one step further than continuous delivery. With this practice, every
+                        change that passes all stages of your production pipeline is released to your customers. There's
+                        no
+                        human intervention, and only a failed test will prevent a new change to be deployed to
+                        production.
+
+                        Continuous deployment is an excellent way to accelerate the feedback loop with your customers
+                        and
+                        take pressure off the team as there isn't a Release Day anymore. Developers can focus on
+                        building
+                        software, and they see their work go live minutes after they've finished working on it.</p>
+
+                </header>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top"
+                             alt="...">
+                        <div class="card-body">
+                            <p class="card-text">This page is built with F layout.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Thankyou</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

@@ -1,4 +1,140 @@
-{% extends "base.html" %}
-{% block content %}
-    Page 1
-{% endblock %}
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">Sai Babu Bonthu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                   href="{{ url_for('simple_pages.show', page="index") }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" href="{{ url_for('simple_pages.show', page="page1") }}">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page3") }}">Python/Flask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <header>
+
+                    <h1>My Understanding on Docker</h1><small>
+                    Last updated on
+                    <time datetime="March 6,2022">March 6,2022</time>
+                    by Sai Babu Bonthu </small>
+                    <img src="{{ url_for('static', filename='images/docker.jpg') }}" class="d-block w-100" alt="...">
+                    <h4>Docker Images</h4>
+                    <p>Docker image is a template needed to run an application. It consists of application code,
+                        libraries,
+                        tools, dependencies, etc.</p>
+
+                    <p>Docker images are read-only immutable files, which are sometimes also called snapshots. You do
+                        not
+                        start or run a docker image; you build a container through it. When a container is created from
+                        a
+                        Docker image, it creates a containers layer on top of the image layer.</p>
+
+                    <p>There has to be a base docker image that is used to create multiple other docker images with some
+                        modifications to the base image.</p>
+
+                    <p>Docker Hub is a repository of Docker images for almost all technology stack. You can pull a
+                        docker
+                        image from DockerHub and start building containers.</p>
+                    <h4>Docker Containers</h4>
+                    <p>Docker containers are executable software package that includes all dependencies required to
+                        execute
+                        an
+                        application. With Docker containers, applications can work efficiently in different computer
+                        environments.</p>
+                    <h4>Docker File</h4>
+                    <p>Dockerfile is a shell script that defines all the tasks that need to be executed. From a docker
+                        file,
+                        you create a docker image; from the docker image, you create a docker container.</p>
+                    <h4>Docker Commands</h4>
+                    <p>->docker –version</p>
+                    <p>This command is used to get the currently installed version of docker</p>
+                    <p>->docker pull</p>
+                    <p>This command is used to pull images from the docker repository(hub.docker.com)</p>
+                    <p>->docker run</p>
+                    <p>This command is used to create a container from an image</p>
+                    <p>->docker ps</p>
+                    <p>This command is used to list the running containers</p>
+                    <p>->docker stop</p>
+                    <p>This command stops a running container</p>
+                    <p>->docker kill</p>
+                    <p>This command kills the container by stopping its execution immediately. The difference between
+                        ‘docker kill’ and ‘docker stop’ is that ‘docker stop’ gives the container time to shutdown
+                        gracefully, in situations when it is taking too much time for getting the container to stop, one
+                        can
+                        opt to kill it</p>
+                    <p>->docker commit</p>
+                    <p>This command creates a new image of an edited container on the local system</p>
+                    <p>->docker push</p>
+                    <p>This command is used to push an image to the docker hub repository</p>
+                    <p>->docker build</p>
+                    <p>This command is used to build an image from a specified docker file</p>
+                </header>
+            </div>
+            <div class="col">
+                <div class="card" style="width: 18rem;">
+                    <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <p class="card-text">This page is built with F layout.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Thankyou</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>
