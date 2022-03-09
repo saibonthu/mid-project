@@ -57,4 +57,4 @@ jobs:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: "mid-project-production" #Must be unique in Heroku
           heroku_email: "sb254@njit.edu"
-          usedocker: true
+          usedocker: truer
