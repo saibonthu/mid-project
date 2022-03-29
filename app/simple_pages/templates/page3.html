@@ -45,19 +45,36 @@
                             <li class="nav-item">
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page5") }}">OOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page6") }}">AAA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page7") }}">OOPCAL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page8") }}">SOLID</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </nav>
         </header>
     </div>
+    <div class="container">
     <div class="row">
         <div class="col-8">
             <header>
 
                 <h1>My Understanding on Python/Flask</h1><small>
                 Last updated on
-                <time datetime="March 6,2022">March 6,2022</time>
+                <time datetime="March 28,2022">March 28,2022</time>
                 by Sai Babu Bonthu </small>
                 <img src="{{ url_for('static', filename='images/flask.png') }}" class="d-block w-100" alt="...">
                 <h4>Python/Flask</h4>
@@ -84,11 +101,31 @@
                     <p class="card-text">This page is built with F layout.</p>
                 </div>
             </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Reference
+                </div>
+                <div class="card-body">
+                    <h5 class="card-title">reference link for python/flask</h5>
+                    <a href="https://flask.palletsprojects.com/en/2.1.x/" class="btn btn-primary">python/flask</a>
+                </div>
+            </div>
+            <br>
+            <div class="card" style="width: 18rem;">
+                <div class="card-header">
+                    Sai Babu
+                </div>
+                <div class="card-body">
+                    <p class="card-text">This page was authored by Sai Babu at NJIT.</p>
+                </div>
+            </div>
         </div>
         <footer class="footer">
             <p>Thankyou</p>
         </footer>
     </div>
+
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

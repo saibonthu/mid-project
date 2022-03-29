@@ -37,21 +37,21 @@
                                 <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1") }}">Docker</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link active"
-                                   href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
                                    href="{{ url_for('simple_pages.show', page="page3") }}">Python/Flask</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link"
                                    href="{{ url_for('simple_pages.show', page="page5") }}">OOP</a>
                             </li>
-                            <li class="nav-item">
+                            <li class="nav-item active">
                                 <a class="nav-link"
                                    href="{{ url_for('simple_pages.show', page="page6") }}">AAA</a>
                             </li>
@@ -71,52 +71,49 @@
     </div>
     <div class="container">
         <div class="row">
-            <div class="col-8">
+
+            <div class="col">
                 <header>
 
-                    <h1>My Understanding on GIT</h1><small>
+                    <h1>AAA Testing</h1><small>
                     Last updated on
                     <time datetime="March 28,2022">March 28,2022</time>
                     by Sai Babu Bonthu </small>
-                    <img src="{{ url_for('static', filename='images/git.png') }}" class="d-block w-100" alt="...">
-                    <h4>Branch</h4>
-                    <p>In Git, branches are a part of your everyday development process. Git branches are effectively a
-                        pointer to a snapshot of your changes. When you want to add a new feature or fix a bug—no matter
-                        how
-                        big or how small—you spawn a new branch to encapsulate your changes.</p>
-                    <h4>Merge</h4>
-                    <p>Merging is Git's way of putting a forked history back together again. The git merge command lets
-                        you
-                        take the independent lines of development created by git branch and integrate them into a single
-                        branch.</p>
-                    <h4>Commit</h4>
-                    <p>The git commit command captures a snapshot of the project's currently staged changes. Committed
-                        snapshots can be thought of as “safe” versions of a project—Git will never change them unless
-                        you
-                        explicitly ask it to. Prior to the execution of git commit, The git add command is used to
-                        promote
-                        or 'stage' changes to the project that will be stored in a commit. These two commands git commit
-                        and
-                        git add are two of the most frequently used.</p>
-                    <h4>Tags</h4>
-                    <p>Tags are ref's that point to specific points in Git history. Tagging is generally used to capture
-                        a
-                        point in history that is used for a marked version release. A tag is like a branch
-                        that doesn't change. Unlike branches, tags, after being created, have no further history of
-                        commits.</p>
-                    <h4>Repositories</h4>
-                    <p>A Git repository is the . git/ folder inside a project. This repository tracks all changes made
-                        to
-                        files in your project, building a history over time.</p>
+                    <img src="{{ url_for('static', filename='images/aaa.jpg') }}" class="d-block w-100" alt="...">
+                    <p>A test is a procedure that exercises a behavior to determine if the behavior functions correctly.
+                        There are many different kinds of tests, like unit tests, integration tests, or end-to-end
+                        tests, but all functional tests do the same basic thing: they try something and report PASS or
+                        FAIL.</p>
+                    <P>So, if we intend to spend time writing tests, how can we write good tests? There’s a simple but
+                        powerful pattern I like to follow: Arrange-Act-Assert.</P>
+                    <h3>AAA testing</h3>
+                    <p>AAA pattern suggests that we should layout our tests in to 3 sections; Arrange, Act, Assert. Each
+                        part is responsible for a specific concern of a test case.</p>
+                    <h4>Arrange</h4>
+                    <p>In this section, we perform the setyp and initialization required for the test. This usually
+                        involves creating data required for a test case and / or setting up the mocks.</p>
+                    <h4>Act</h4>
+                    <p>Commits are at the heart of Git usage. You can think of a commit as a snapshot of your project,
+                        where a new version of that project is created in the current repository.</p>
+                    <h4>Assert</h4>
+                    <p>Git has the ability to tag specific points in a repository’s history as being important.
+                        Typically, people use this functionality to mark release points</p>
+                    <h2>Why is AAA Testing Important?</h2>
+                    <p>Unit testing ensures that all code meets quality standards before it's deployed. This ensures a
+                        reliable engineering environment where quality is paramount. Over the course of the product
+                        development life cycle, unit testing saves time and money, and helps developers write better
+                        code, more efficiently.</p>
 
                 </header>
             </div>
             <div class="col">
-                <div class="card" style="width: 18rem;">
-                    <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top"
-                         alt="...">
-                    <div class="card-body">
-                        <p class="card-text">This page is built with F layout.</p>
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top"
+                             alt="...">
+                        <div class="card-body">
+                            <p class="card-text">This page is built with F layout.</p>
+                        </div>
                     </div>
                 </div>
                 <br>
@@ -125,8 +122,9 @@
                         Reference
                     </div>
                     <div class="card-body">
-                        <h5 class="card-title">reference link for GIT</h5>
-                        <a href="https://www.atlassian.com/git/tutorials/using-branches" class="btn btn-primary">GIT</a>
+                        <h5 class="card-title">reference link for AAA</h5>
+                        <a href="https://medium.com/xebia-engineering/unit-testing-aaa-pattern-ab1c08737d53"
+                           class="btn btn-primary">AAA</a>
                     </div>
                 </div>
                 <br>
@@ -140,15 +138,17 @@
                 </div>
             </div>
         </div>
-        <footer class="footer">
-            <p>Thankyou</p>
-        </footer>
     </div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-            crossorigin="anonymous"></script>
-    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <footer class="footer">
+        <p>Thankyou</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
 
 </body>
 </html>
