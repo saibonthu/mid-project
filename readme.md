@@ -2,7 +2,7 @@
 
 [![Production Workflow](https://github.com/saibonthu/mid-project/actions/workflows/prod.yml/badge.svg)](https://github.com/saibonthu/mid-project/actions/workflows/prod.yml)
 
-* [Production Deployment](https://heroku-mid-production.herokuapp.com/)
+* [Production Deployment](https://mid-project-production.herokuapp.com/)
 
 
 [![Development Workflow](https://github.com/saibonthu/mid-project/actions/workflows/dev.yml/badge.svg)](https://github.com/saibonthu/mid-project/actions/workflows/dev.yml)
