@@ -14,3 +14,6 @@ font-size: 100%;
   height: 450px !important;
   width: 850px !important;
 }
+.bgtext {
+    text-shadow: 0 0 3px cyan;
+}
