@@ -1,0 +1,247 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">Sai Babu Bonthu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                   href="{{ url_for('simple_pages.show', page="index") }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1") }}">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page3") }}">Python/Flask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page5") }}">OOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page6") }}">AAA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page7") }}">OOPCAL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page8") }}">SOLID</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <header>
+
+                    <h1>Principles of Object Oriented Programming concepts in calculator app</h1><small>
+                    Last updated on
+                    <time datetime="March 28,2022">March 28,2022</time>
+                    by Sai Babu Bonthu </small>
+                    <img src="{{ url_for('static', filename='images/calculator.jpg') }}" class="d-block w-100"
+                         alt="...">
+                    <h4>Encapsulation</h4>
+                    <p>In object-oriented programming (OOP), encapsulation refers to the bundling of data with the
+                        methods that operate on that data, or the restricting of direct access to some of an object's
+                        components. Encapsulation is used to hide the values or state of a structured data object
+                        inside a class, preventing direct access to them by clients in a way that could expose hidden
+                        implementation details or violate state invariance maintained by the methods.
+                    </p>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <code>
+                                    <p>class Summation(Calculator):</p>
+                                    <p> def calculate_res(self):</p>
+                                    <p> sum_values = 0.0</p>
+                                    <p> for num in self.values_list:</p>
+                                    <p> sum_values = Add.add(num, sum_values)</p>
+                                    <p> return sum_values</p>
+                                </code>
+                            </div>
+                            <div class="col">
+                                <img src="{{ url_for('static', filename='images/encapsulation.jpg') }}"
+                                     class="d-block w-150"
+                                     alt="...">
+                            </div>
+                        </div>
+                    </div>
+
+                    </p>
+                    <p>In Calculator program, in all the Python files the methods are Encapsulated under the class. For
+                        example:- In calculation.py, class Calculation encapsulates method,__init__(),
+                        convert_args_to_list_float(), create(), get_result(). To access any of these methods we will
+                        have to call class Calculation and then can access the method.</p>
+                    <h4>Inheritance :</h4>
+                    <p>In object-oriented programming, inheritance is the mechanism of basing an object or class upon
+                        another object (prototype-based inheritance) or class (class-based inheritance), retaining
+                        similar implementation. Also defined as deriving new classes (sub classes) from existing ones
+                        such as super class or base class and then forming them into a hierarchy of classes. In most
+                        class-based object-oriented languages, an object created through inheritance, a "child object",
+                        acquires all the properties and behaviors of the "parent object" , with the exception of:
+                        constructors, destructor, overloaded operators and friend functions of the base class.
+                        Inheritance allows programmers to create classes that are built upon existing classes, to
+                        specify a new implementation while maintaining the same behaviors (realizing an interface), to
+                        reuse code and to independently extend original software via public classes and interfaces. The
+                        relationships of objects or classes through inheritance give rise to a directed acyclic
+                        graph.</p>
+                    <h2>Types of Inheritance</h2>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Single inheritance</h4>
+                                <p>where subclasses inherit the features of one superclass. A class acquires the
+                                    properties of another class.</p>
+                            </div>
+                            <div class="col">
+                                <img src="{{ url_for('static', filename='images/single inheritance.jpg') }}"
+                                     class="d-block w-100"
+                                     alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Multiple inheritance</h4>
+                                <p>where one class can have more than one superclass and inherit features from all
+                                    parent classes.</p>
+                                <p>
+                                    "Multiple inheritance ... was widely supposed to be very difficult to implement
+                                    efficiently. For example, in a summary of C++ in his book on Objective C, Brad Cox
+                                    actually claimed that adding multiple inheritance to C++ was impossible. Thus,
+                                    multiple inheritance seemed more of a challenge. Since I had considered multiple
+                                    inheritance as early as 1982 and found a simple and efficient implementation
+                                    technique in 1984, I couldn't resist the challenge. I suspect this to be the only
+                                    case in which fashion affected the sequence of events."</p>
+                            </div>
+                            <div class="col">
+                                <br>
+                                <img src="{{ url_for('static', filename='images/multiple inheritance.jpg') }}"
+                                     class="d-block w-100"
+                                     alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container">
+                        <div class="row">
+                            <div class="col">
+                                <h4>Multilevel inheritance</h4>
+                                <p>where a subclass is inherited from another subclass. It is not uncommon that a class
+                                    is derived from another derived class as shown in the figure "Multilevel
+                                    inheritance".
+
+                                    Multilevel inheritance
+                                    The class A serves as a base class for the derived class B, which in turn serves as
+                                    a base class for the derived class C. The class B is known as intermediate base
+                                    class because it provides a link for the inheritance between A and C. The chain ABC
+                                    is known as inheritance path.</p>
+
+                            </div>
+                            <div class="col">
+                                <br>
+                                <img src="{{ url_for('static', filename='images/multilevel inheritance.jpg') }}"
+                                     class="d-block w-100"
+                                     alt="...">
+                            </div>
+                        </div>
+                    </div>
+                    <h4>Hierarchical inheritance</h4>
+                    <p>This is where one class serves as a superclass (base class) for more than one sub class. For
+                        example, a parent class, A, can have two subclasses B and C. Both B and C's parent class is A,
+                        but B and C are two separate subclasses.</p>
+                    <h4>Hybrid inheritance</h4>
+                    <p>Hybrid inheritance is when a mix of two or more of the above types of inheritance occurs. An
+                        example of this is when class A has a subclass B which has two subclasses, C and D. This is a
+                        mixture of both multilevel inheritance and hierarchal inheritance.</p>
+
+
+                </header>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top"
+                             alt="...">
+                        <div class="card-body">
+                            <p class="card-text">This page is built with F layout.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Reference
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">reference link for OPPCAL</h5>
+                        <a href="https://en.wikipedia.org/wiki/Inheritance_(object-oriented_programming)"
+                           class="btn btn-primary">OPPCAL</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Sai Babu
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This page was authored by Sai Babu at NJIT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Thankyou</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

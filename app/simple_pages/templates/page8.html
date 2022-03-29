@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">Sai Babu Bonthu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                   href="{{ url_for('simple_pages.show', page="index") }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1") }}">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page3") }}">Python/Flask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page5") }}">OOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page6") }}">AAA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page7") }}">OOPCAL</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page8") }}">SOLID</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <header>
+
+                    <h1>SOLID principles</h1>
+                    Last updated on
+                    <time datetime="March 28,2022">March 28,2022</time>
+                    by Sai Babu Bonthu </small>
+                    <img src="{{ url_for('static', filename='images/solid.jpg') }}" class="d-block w-100" alt="...">
+
+                    <h4>SOLID</h4>
+                    <p>The SOLID principle helps in reducing tight coupling. Tight coupling means a group of classes are
+                        highly dependent on one another which you should avoid in your code. Opposite of tight coupling
+                        is loose coupling and your code is considered as a good code when it has loosely-coupled
+                        classes. Loosely coupled classes minimize changes in your code, helps in making code more
+                        reusable, maintainable, flexible and stable.</p>
+                    <h4>Single-Responsibility Principle</h4>
+                    <p>The single-responsibility principle (SRP) is a computer-programming principle that states that
+                        every module, class or function in a computer program should have responsibility over a single
+                        part of that program's functionality, and it should encapsulate that part. All of that module,
+                        class or function's services should be narrowly aligned with that responsibility.</p>
+                    <h4>open–closed principle</h4>
+                    <p>In object-oriented programming, the open–closed principle states "software entities (classes,
+                        modules, functions, etc.) should be open for extension, but closed for modification"; that
+                        is, such an entity can allow its behaviour to be extended without modifying its source code.</p>
+                    <p>
+
+                        The name open–closed principle has been used in two ways. Both ways use generalizations (for
+                        instance, inheritance or delegate functions) to resolve the apparent dilemma, but the goals,
+                        techniques, and results are different.</p>
+                    <h4> Liskov substitution principle</h4>
+                    <p>The Liskov substitution principle (LSP) is a particular definition of a subtyping relation,
+                        called strong behavioral subtyping, that was initially introduced by Barbara Liskov in a 1988
+                        conference keynote address titled Data abstraction and hierarchy. It is based on the concept of
+                        "substitutability" – a principle in object-oriented programming stating that an object (such as
+                        a class) and a sub-object (such as a class that extends the first class) must be interchangeable
+                        without breaking the program. It is a semantic rather than merely syntactic relation, because it
+                        intends to guarantee semantic interoperability of types in a hierarchy, object types in
+                        particular.</p>
+                    <h4>interface segregation principle</h4>
+                    <p>In the field of software engineering, the interface segregation principle (ISP) states that no
+                        code should be forced to depend on methods it does not use.[1] ISP splits interfaces that are
+                        very large into smaller and more specific ones so that clients will only have to know about the
+                        methods that are of interest to them. Such shrunken interfaces are also called role
+                        interfaces.[2] ISP is intended to keep a system decoupled and thus easier to refactor, change,
+                        and redeploy. ISP is one of the five SOLID principles of object-oriented design, similar to the
+                        High Cohesion Principle of GRASP. Beyond object-oriented design, ISP is also a key principle
+                        in the design of distributed systems in general and microservices in particular. ISP is one of
+                        the six IDEALS principles for microservice design.</p>
+                    <h4>dependency inversion principle</h4>
+                    <p>In object-oriented design, the dependency inversion principle is a specific methodology for
+                        loosely coupling software modules. When following this principle, the conventional dependency
+                        relationships established from high-level, policy-setting modules to low-level, dependency
+                        modules are reversed, thus rendering high-level modules independent of the low-level module
+                        implementation details. The principle states:</p>
+                    <p>
+
+                        A. High-level modules should not import anything from low-level modules. Both should depend on
+                        abstractions (e.g., interfaces).</p>
+                    <p>
+                        B. Abstractions should not depend on details. Details (concrete implementations) should depend
+                        on
+                        abstractions.</p>
+                    <p>
+                        By dictating that both high-level and low-level objects must depend on the same abstraction,
+                        this design principle inverts the way some people may think about object-oriented
+                        programming.</p>
+
+                </header>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top"
+                             alt="...">
+                        <div class="card-body">
+                            <p class="card-text">This page is built with F layout.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Reference
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">reference link for SOLID</h5>
+                        <a href="https://en.wikipedia.org/wiki/SOLID"
+                           class="btn btn-primary">SOLID</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Sai Babu
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This page was authored by Sai Babu at NJIT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Thankyou</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

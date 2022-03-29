@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    {% block head %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}"/>
+
+        <title>{% block title %}{% endblock %}This is {{ name }} Website</title>
+    {% endblock %}
+
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
+        <header class="mb-5">
+            <!-- As a link -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <div class="container">
+                    <a class="navbar-brand" href="/">Sai Babu Bonthu</a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page"
+                                   href="{{ url_for('simple_pages.show', page="index") }}">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page1") }}">Docker</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ url_for('simple_pages.show', page="page2") }}">GIT</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page3") }}">Python/Flask</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page4") }}">CI/CD</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page5") }}">OOP</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page6") }}">AAA</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page7") }}">OOPCAL</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link"
+                                   href="{{ url_for('simple_pages.show', page="page8") }}">SOLID</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+    </div>
+    <div class="container">
+        <div class="row">
+
+            <div class="col">
+                <header>
+
+                    <h1>Object Oriented Programming Concepts</h1><small>
+                    Last updated on
+                    <time datetime="March 28,2022">March 28,2022</time>
+                    by Sai Babu Bonthu </small>
+                    <img src="{{ url_for('static', filename='images/oops.jpeg') }}" class="d-block w-100" alt="...">
+                    <h4>Instantiation :</h4>
+                    <p>Instantiate (a verb) and instantiation (the noun) in computer science refer to the creation of an
+                        object (or an “instance” of a given class) in an object-oriented programming (OOP) language.
+                        Referencing a class declaration, an instantiated object is named and created, in memory or on
+                        disk. Resources are allocated for it, it gains a place in the general codebase as a whole and it
+                        fills a role in what the programmers are constructing. It also is delineated or identified with
+                        its own attributes.</p>
+                    <h4>Object :</h4>
+                    <p>Object is an instance of a class. An object in OOPS is nothing but a self-contained component
+                        which consists of methods and properties to make a particular type of data useful. For example
+                        color name, table, bag, barking. When you send a message to an object, you are asking the object
+                        to invoke or execute one of its methods as defined in the class.</p>
+                    <h4>Namespace :</h4>
+                    <p>A namespace is a declarative region that provides a scope to the identifiers (the names of types,
+                        functions)</p>
+                    <h4>Class :</h4>
+                    <p>Class are a blueprint or a set of instructions to build a specific type of object. It is a basic
+                        concept of Object-Oriented Programming which revolve around the real-life entities. Class in
+                        Java determines how an object will behave and what the object will contain. options, variables,
+                        etc) inside it. Namespaces are used to organize code into logical groups and to prevent name
+                        collisions that can occur especially when your code base includes multiple libraries. All
+                        identifiers at namespace scope are visible to one another without qualification. Identifiers
+                        outside the namespace can access the members by using the fully qualified name for each
+                        identifier, for example std::vector vec;, or else by a using Declaration for a single identifier
+                        (using std::string), or a using Directive for all the identifiers in the namespace (using
+                        namespace std;). Code in header files should always use the fully qualified namespace name.</p>
+                    <h4>Constructor :</h4>
+                    <p>A constructor resembles an instance method, but it differs from a method in that it has no
+                        explicit return type, it is not implicitly inherited and it usually has different rules for
+                        scope modifiers. Constructors often have the same name as the declaring class. They have the
+                        task of initializing the object's data members and of establishing the invariant of the class,
+                        failing if the invariant is invalid. A properly written constructor leaves the resulting object
+                        in a valid state. Immutable objects must be initialized in a constructor.</p>
+                    <h4>Fixture :</h4>
+                    <p>The purpose of a test fixture is to ensure that there is a well known and fixed environment in
+                        which tests are run so that results are repeatable. Some people call this the test context.
+                        Examples of fixtures: Loading a database with a specific, known set of data Erasing a hard disk
+                        and installing a known clean operating system installation Copying a specific known set of files
+                        Preparation of input data and set-up/creation of fake or mock objects</p>
+                    <h4>Type Hint :</h4>
+                    <p>In simple word, type hinting means providing hints to function to only accept the given data
+                        type. In technical word we can say that Type Hinting is method by which we can force function to
+                        accept the desired data type.</p>
+                    <h4>Type Cast :</h4>
+                    <p>Typecast is a way of changing an object from one data type to the next. It is used in computer
+                        programming to ensure a function handles the variables correctly. A typecast example is the
+                        transformation of an integer into a string.</p>
+                    <h4>Unit Test :</h4>
+                    <p>Unit testing aims to ensure that each individual part of a program works correct in isolation
+                        Unit testing should assure correct behaviour of the given unit before it is integrated with
+                        other units Unit testing is black box testing</p>
+                    <h4>Static :</h4>
+                    <p>In object-oriented programming, there is also the concept of a static member variable, which is a
+                        "class variable" of a statically defined class, i.e., a member variable of a given class which
+                        is shared across all instances (objects), and is accessible as a member variable of these
+                        objects.</p>
+                    <h4>Instance Method :</h4>
+                    <p>An instance method is a method that belongs to instances of a class, not to the class itself. To
+                        define an instance method, just omit static from the method heading. Within the method
+                        definition, you refer to variables and methods in the class by their names, without a dot.</p>
+                    <h4>Instance Property :</h4>
+                    <p>A typical property declared in a class is an instance property, meaning that you have a copy of
+                        that property's value for each instance of the class. You can also define static properties,
+                        which are properties that have a single value for the entire class, regardless of the number of
+                        instances of the class that exist.</p>
+                    <h4>Static Method :</h4>
+                    <p>A static method (or static function) is a method defined as a member of an object but is
+                        accessible directly from an API object's constructor, rather than from an object instance
+                        created via the constructor.</p>
+                    <h4>Static Property :</h4>
+                    <p>Static methods are often utility functions, such as functions to create or clone objects, whereas
+                        static properties are useful for caches, fixed-configuration, or any other data you don't need
+                        to be replicated across instances.</p>
+                    <h4>Encapsulation :</h4>
+                    <p>Encapsulation is one of the fundamental concepts in object-oriented programming (OOP). It
+                        describes the idea of wrapping data and the methods that work on data within one unit. This puts
+                        restrictions on accessing variables and methods directly and can prevent the accidental
+                        modification of data. To prevent accidental change, an object’s variable can only be changed by
+                        an object’s method. Those types of variables are known as private variable. A class is an
+                        example of encapsulation as it encapsulates all the data that is member functions, variables,
+                        etc.</p>
+                    <h4>Inheritance :</h4>
+                    <p>Inheritance is the capability of one class to derive or inherit the properties from another
+                        class. The benefits of inheritance are: 1. It represents real-world relationships well. 2. It
+                        provides reusability of a code. We don’t have to write the same code again and again. Also, it
+                        allows us to add more features to a class without modifying it. 3. It is transitive in nature,
+                        which means that if class B inherits from another class A, then all the subclasses of B would
+                        automatically inherit from class A.</p>
+                    <h4>Abstraction :</h4>
+                    <p>An abstract class can be considered as a blueprint for other classes. It allows you to create a
+                        set of methods that must be created within any child classes built from the abstract class. A
+                        class which contains one or more abstract methods is called an abstract class. An abstract
+                        method is a method that has a declaration but does not have an implementation. While we are
+                        designing large functional units we use an abstract class. When we want to provide a common
+                        interface for different implementations of a component, we use an abstract class.</p>
+                    <h4>Polymorphism :</h4>
+                    <p>The word polymorphism means having many forms. In programming, polymorphism means the same
+                        function name (but different signatures) being used for different types.</p>
+                    <h4>Overview of SOLID :</h4>
+                    <p>The SOLID principle helps in reducing tight coupling. Tight coupling means a group of classes are
+                        highly dependent on one another which you should avoid in your code. Opposite of tight coupling
+                        is loose coupling and your code is considered as a good code when it has loosely-coupled
+                        classes. Loosely coupled classes minimize changes in your code, helps in making code more
+                        reusable, maintainable, flexible and stable.</p>
+                    <h4>Overview of Design Pattern :</h4>
+                    <p>Design Patterns is the most essential part of Software Engineering, as they provide the general
+                        repeatable solution to a commonly occurring problem in software design. They usually represent
+                        some of the best practices adopted by experienced object-oriented software developers.</p>
+
+                </header>
+            </div>
+            <div class="col">
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                        <img src="{{ url_for('static', filename='images/flayout.png') }}" class="card-img-top"
+                             alt="...">
+                        <div class="card-body">
+                            <p class="card-text">This page is built with F layout.</p>
+                        </div>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Reference
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">reference link for OOPS</h5>
+                        <a href="https://www.techtarget.com/searchapparchitecture/definition/object-oriented-programming-OOP#:~:text=Object%2Doriented%20programming%20(OOP)%20is%20a%20computer%20programming%20model,has%20unique%20attributes%20and%20behavior.%20https://en.wikipedia.org/wiki/Object-oriented_programming"
+                           class="btn btn-primary">OOPS</a>
+                    </div>
+                </div>
+                <br>
+                <div class="card" style="width: 18rem;">
+                    <div class="card-header">
+                        Sai Babu
+                    </div>
+                    <div class="card-body">
+                        <p class="card-text">This page was authored by Sai Babu at NJIT.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>Thankyou</p>
+    </footer>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+<script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+
+</body>
+</html>

@@ -9,8 +9,8 @@ font-size: 100%;
   color: white;
   text-align: center;
 }
-.head {
-  width: 20%;
-  background-color: aquamarine;
-  text-align: center;
+
+.item img {
+  height: 450px !important;
+  width: 850px !important;
 }
